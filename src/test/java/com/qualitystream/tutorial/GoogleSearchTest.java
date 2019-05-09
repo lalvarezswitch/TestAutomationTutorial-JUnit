@@ -24,12 +24,12 @@ public class GoogleSearchTest {
 	public void testGooglePage() {
 		WebElement searchbox = driver.findElement(By.name("q"));
 		searchbox.clear();
-		searchbox.sendKeys("quality-stream Introducción a la Automatización de Pruebas de Software");
+		searchbox.sendKeys("quality-stream Introduccion a la Automatizacion de Pruebas de Software");
 		searchbox.submit();
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
-		assertEquals("quality-stream Introducción a la Automatización de Pruebas de Software - Buscar con Google", driver.getTitle());
+		assertEquals("quality-stream Introduccion a la Automatizacion de Pruebas de Software - Buscar con Google", driver.getTitle());
 		
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	}
